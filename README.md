@@ -31,7 +31,7 @@ python coursera.py
 ```
 
 ### Example result scrinshort
-![xlsx-png-file](coursera-xlsx.png "this result file with courses datas")
+![xlsx-png-file](https://github.com/nergilz/json_data_bars/raw/master/coursera-xlsx.png "this result file with courses datas")
 
 
 ### Requirements
