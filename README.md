@@ -16,7 +16,9 @@ The script make parsing [Coursera](https://www.coursera.org) and get information
     [virtualenv](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
     [requests](http://docs.python-requests.org/en/latest/)
     [openpyxl](https://pypi.org/project/openpyxl/)
-    [beautifulsoup4](https://pypi.org/project/beautifulsoup4/) 
+    [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
++ Output file name: "coursera-courses.xlsx"
++ You make change name for output file 
 
 
 ### Install libs
@@ -28,6 +30,16 @@ pip install -r requirements.txt  # or pip3
 ### Sart script
 ```bash
 python coursera.py
+
+```
+### Start with your file name
+```bash
+python coursera.py excample.xlsx
+```
+
+### For get help
+```bash
+python coursera.py --help
 ```
 
 ### Example result scrinshort
