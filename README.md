@@ -18,7 +18,8 @@ The script make parsing [Coursera](https://www.coursera.org) and get information
     [openpyxl](https://pypi.org/project/openpyxl/)
     [beautifulsoup4](https://pypi.org/project/beautifulsoup4/)
 + Output file name: "coursera-courses.xlsx"
-+ You make change name for output file 
++ You make change name for output file
++ You make change the count of urls
 
 
 ### Install libs
@@ -32,9 +33,9 @@ pip install -r requirements.txt  # or pip3
 python coursera.py
 
 ```
-### Start with your file name
+### Start with your attributes
 ```bash
-python coursera.py excample.xlsx
+python coursera.py --output excample.xlsx --count 20
 ```
 
 ### For get help
