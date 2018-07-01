@@ -27,13 +27,10 @@ def get_arguments():
 
 
 def fetch_html(url):
-    try:
-        response = requests.get(url)
-        response.encoding = 'utf-8'
-        return response.text
 
-    except requests.HTTPError as error:
-        sys.exit('ERROR: {}'.format(error))
+    response = requests.get(url)
+    response.encoding = 'utf-8'
+    return response.text
 
 
 def get_courses_urls(xtml_with_links):
@@ -142,8 +139,13 @@ if __name__ == '__main__':
     arguments = get_arguments()
     random_urls = []
 
-    xml_with_links = fetch_html(url_xml_feed)
-    courses_urls = get_courses_urls(xml_with_links)
-    random_urls = random.sample(courses_urls, arguments.count)
-    courses_data = get_courses_data(random_urls)
+    try:
+        xml_with_links = fetch_html(url_xml_feed)
+        courses_urls = get_courses_urls(xml_with_links)
+        random_urls = random.sample(courses_urls, arguments.count)
+        courses_data = get_courses_data(random_urls)
+
+    except requests.HTTPError as err:
+        sys.exit('ERROR: {}'.format(err))
+
     save_work_book(courses_data)
